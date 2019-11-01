@@ -2,10 +2,11 @@ nav {
   width: 100%;
   margin: 0px;
   display: block;
+  line-height: 2.5;
 }
 
 nav ul {
-  background-color: #eee;
+  background-color: #f8f8f8;
   overflow: hidden;
   margin: 0px;
   padding: 0px;
@@ -16,14 +17,31 @@ ul.nav__top-nav li {
   float: left;
 }
 
+ul li.nav__text-style {
+  padding-top: 20px;
+}
+
+ul li.nav__top-right.nav__rightmost-element {
+  margin-right: 30px;
+}
+
+ul li.nav__leftmost-element {
+  margin-left: 30px;
+}
+
 ul.nav__top-nav li.nav__top-right {
   float: right;
 }
 
+ul.nav__top-nav li a img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
 ul.nav__top-nav li a {
   display: block;
   text-decoration: none;
-  min-height: 16px;
+  min-height: 25px;
   text-align: center;
   padding: 14px;
   text-transform: uppercase;
@@ -31,8 +49,11 @@ ul.nav__top-nav li a {
 }
 
 ul.nav__top-nav li a:hover {
-  background-color: #0080ff;
-  color: #fff;
+  /* background-color: #c0c0c0; */
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 ul.nav__top-nav li.nav__dropdown-icon {
@@ -40,7 +61,11 @@ ul.nav__top-nav li.nav__dropdown-icon {
 }
 
 /*#####################Mobile#############################*/
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 800px) {
+  nav {
+    line-height: 2.5;
+  }
+
   ul.nav__top-nav li:not(:nth-child(1)) {
     display: none;
   }
@@ -48,6 +73,21 @@ ul.nav__top-nav li.nav__dropdown-icon {
   ul.nav__top-nav li.nav__dropdown-icon {
     display: block;
     float: right;
+    padding: 15px 20px;
+  }
+
+  ul.nav__top-nav li a {
+    padding: 10px 10px;
+  }
+  ul.nav__top-nav li a img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+
+
+  ul li.nav__top-right.nav__rightmost-element {
+    margin-right: 0px;
   }
 
   ul.nav__top-nav.responsive li.nav__dropdown-icon {
@@ -67,5 +107,16 @@ ul.nav__top-nav li.nav__dropdown-icon {
   ul.nav__top-nav.responsive li a {
     display: block;
     /* text-align: left; */
+  }
+}
+
+@media screen and (max-width: 680px) {
+
+
+
+  ul.nav__top-nav li a img{
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
   }
 }

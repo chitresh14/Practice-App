@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import 'bootstrap';
 
 @Component({
   selector: 'app-home',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 
-export class HomeComponent { }
+export class HomeComponent {
+  images = [1, 2, 3].map(() => `https://picsum.photos/900/500?random&t=${Math.random()}`);
+ }
 
