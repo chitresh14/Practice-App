@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import 'bootstrap';
+// import '~font-awesome/css/font-awesome.css';
 
 @Component({
   selector: 'app-home',

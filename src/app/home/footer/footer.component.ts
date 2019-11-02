@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { faHome, faEnvelope, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-footer',
@@ -6,4 +8,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.css']
 })
 
-export class FooterComponent { }
+export class FooterComponent {
+  homeIcon = faHome;
+  emailIcon = faEnvelope;
+   phoneIcon = faPhoneAlt;
+}
